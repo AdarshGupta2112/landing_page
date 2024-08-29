@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        /* Add a black background color to the top navigation */
+        .topnav {
+            background-color: #333;
+            overflow: hidden;
+        }
+
+        /* Style the links inside the navigation bar */
+        .topnav a {
+            float: left;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+        /* Change the color of links on hover */
+        .topnav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        /* Add an active class to highlight the current page */
+        .topnav a.active {
+            background-color: #04AA6D;
+            color: white;
+        }
+
+        /* Hide the link that should open and close the topnav on small screens */
+        .topnav .icon {
+            display: none;
+        }
+.section{
+    height: 100vh;
+    
+}
+body{
+    background: linear-gradient(to bottom, black, #f0f0f0);
+
+
+}
+.center{
+    display: flex;
+    flex-direction: row;
+}
+img{
+    
+    width: 500px;
+    height: 500px;
+    margin-left: 35px;
+    margin-top: 50px;
+}
+.super{
+    margin-top: 250px;
+    color: grey;
+    width: 700px;
+    font-family: 'Kalnia Glaze';
+    font-size: 100px;
+    top: 300px;
+    justify-content: center;
+    align-items: center;
+    
+}
+.over{
+    font-size: 50px;
+}
+.home{
+    height: 100vh;
+
+    background-color: transparent;
+}
+.news{    height: 100vh;
+
+    background-color: transparent;
+}
+.contact{    height: 100vh;
+
+    background-color: transparent;
+}
+.head{
+    margin-left: 400px;
+}
+.Overv{
+color: black;
+font-size: 50px;
+}
+.about{
+    text-align: center;
+}
+.divider{
+    height: 1px ;
+    border: 1px solid grey;
+}
+.avail{
+    font-size: 50px;
+}
+@media screen and (max-width: 600px) {
+            /* Adjust styles for small screens */
+            .center {
+                flex-direction: column;
+                align-items: center;
+            }
+            img {
+                width: 100%; /* Full width for small screens */
+                max-width: 500px; /* Limit image size */
+                height: auto;
+                margin-left: 0;
+                margin-top: 20px;
+            }
+            .super {
+                font-size: 40px; /* Smaller font size */
+                margin-top: 50px;
+            }
+        }
+        /* Media queries for responsiveness */
+        @media screen and (max-width: 600px) {
+            .topnav a:not(:first-child) {
+                display: none;
+            }
+            .topnav a.icon {
+                float: right;
+                display: block;
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            .topnav.responsive {
+                position: relative;
+            }
+            .topnav.responsive a.icon {
+                position: absolute;
+                right: 0;
+                top: 0;
+            }
+            .topnav.responsive a {
+                float: none;
+                display: block;
+                text-align: left;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="topnav" id="myTopnav">
+    <a href="#home" class="active">Home</a>
+    <a href="#news">News</a>
+    <a href="#contact">Contact</a>
+    <a href="#about">About</a>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+    </a>
+</div>
+<div>
+    <section class="home" id="home">
+        <div class="home"> 
+            <div class="center">
+            <div class="super slide-up tagline">SUPER BASS<br><br>
+            <h1 class="over">OVERVIEW</h1>
+            <h2 class="Overv">this is the best headphone you can find online</h2>
+            </div>           
+            <img class="tagline " src="https://www.pngarts.com/files/3/Black-Headphone-PNG-High-Quality-Image.png" alt="Headphones" />
+       </div>
+ 
+    
+    </div>
+    
+    </section>
+    <section class="news" id="news">
+        <div class="news">
+            <div class="tagline head">
+            <img src="https://www.pngplay.com/wp-content/uploads/7/Headphones-Transparent-PNG.png" alt="Headphones" />
+<div class="avail tagline"> avail the offer as soon as possible</div>
+            </div>
+
+
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <div class="about"><div class="divider"></div><h1 class="tagline">
+           adarsh Widget Inc.
+        </h1><div class="divider"></div></div>
+    </section>
+
+</div>
+<script src="https://unpkg.com/scrollreveal"></script>
+
+<script>
+    /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+    function myFunction() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+            x.className += " responsive";
+        } else {
+            x.className = "topnav";
+        }
+    }
+    ScrollReveal().reveal('.headline');
+    ScrollReveal().reveal('.tagline', { delay: 500 });
+    var slideUp = {
+    distance: '150%',
+    origin: 'up',
+    opacity: null
+};
+
+ScrollReveal().reveal('.slide-up', slideUp);
+
+</script>
+
+</body>
+</html>
